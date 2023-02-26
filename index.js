@@ -22,6 +22,21 @@ app.get("/", function (request, response) {
   response.send("🙋‍♂️, 🌏 🎊✨🤩");
 });
 
+
+
+// app.put("/abc/:id",async function (request, response) {
+//   const data=request.body;
+//   const {id}=request.params;
+//   console.log(id)
+//   console.log(data);
+
+// // db.moviesid.updateone({id:id},{$set:data})
+//    const result= await client
+//       .db("b42mongo")
+//      .collection("movies")
+//       .updateOne({id:id},{$set:data})
+//   response.send(result);
+// });
 // const movie=[
 //   {
 //     "id": "99",
