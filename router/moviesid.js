@@ -90,7 +90,7 @@
 //   }
 // ]
 import express from "express";
-import {client} from "../index.js";
+import {client} from '../index.js';
 const router=express.Router()
 
 router.get("",async function (request, response) {
