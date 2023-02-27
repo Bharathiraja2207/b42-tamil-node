@@ -24,17 +24,17 @@ app.get("/", function (request, response) {
 });
 
 
-app.get("/moviesid",async function (request, response) {
+// app.get("/moviesid",async function (request, response) {
 
-  // db.moviesid.find({})
-  // cursor--pagination(20)|cursor->array(toArray())
-  const movie= await client
-  .db("b42mongo")
-  .collection("moviesid")
-  .find({})
-  .toArray();
-      response.send(movie);
-    });
+//   // db.moviesid.find({})
+//   // cursor--pagination(20)|cursor->array(toArray())
+//   const movie= await client
+//   .db("b42mongo")
+//   .collection("moviesid")
+//   .find({})
+//   .toArray();
+//       response.send(movie);
+//     });
   
     app.get("/moviesid/:id", async function (request, response) {
       const {id}=request.params;
