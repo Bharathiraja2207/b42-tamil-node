@@ -90,9 +90,10 @@
 //   }
 // ]
 import express from "express";
+import {client} from "../index.js";
 const router=express.Router()
 
-router.get("/moviesid",async function (request, response) {
+router.get("",async function (request, response) {
 
     // db.moviesid.find({})
     // cursor--pagination(20)|cursor->array(toArray())
@@ -104,7 +105,7 @@ router.get("/moviesid",async function (request, response) {
         response.send(movie);
       });
     
-      router.get("/moviesid/:id", async function (request, response) {
+      router.get("/:id", async function (request, response) {
         const {id}=request.params;
         console.log(id);
         // const movies=movie.filter((mv)=>mv.id===id);
@@ -121,7 +122,7 @@ router.get("/moviesid",async function (request, response) {
       });
     
       // express.json()--middle wear
-      router.post("/moviesid",async function (request, response) {
+      router.post("",async function (request, response) {
         const data=request.body;
         console.log(data);
     
@@ -133,7 +134,7 @@ router.get("/moviesid",async function (request, response) {
         response.send(result);
       });
     
-      router.delete("/moviesid/:id", async function (request, response) {
+      router.delete("/:id", async function (request, response) {
         const {id}=request.params;
        console.log(id)
     // db.moviesid.deleteone({id:"100"})
@@ -149,7 +150,7 @@ router.get("/moviesid",async function (request, response) {
     
     //update
     
-    router.put("/moviesid/:id",async function (request, response) {
+    router.put("/:id",async function (request, response) {
       const data=request.body;
       const {id}=request.params;
       console.log(id)
