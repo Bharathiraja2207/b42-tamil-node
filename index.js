@@ -2,7 +2,7 @@
 import express from "express"; // "type": "module"
 import { MongoClient } from 'mongodb'
 import * as dotenv from 'dotenv'
-import moviesidRouter from './router/moviesid.js'; //we can change name
+import moviesidRouter from './router/moviesid.router.js'; //we can change name
 dotenv.config()
 const app = express();
 
