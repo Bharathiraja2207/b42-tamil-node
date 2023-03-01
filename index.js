@@ -2,7 +2,9 @@
 import express from "express"; // "type": "module"
 import { MongoClient } from 'mongodb'
 import * as dotenv from 'dotenv'
-import moviesidRouter from './router/moviesid.router.js'; //we can change name
+import moviesidRouter from './router/moviesid.router.js';
+import useridRouter from './router/userid.router.js'; //we can change name
+// import bcrypt   from ' bcrypt'
 dotenv.config()
 const app = express();
 
@@ -23,6 +25,8 @@ app.get("/", function (request, response) {
   response.send("🙋‍♂️, 🌏 🎊✨🤩");
 });
 
-
+      
 app.use("/moviesid",moviesidRouter);
+app.use("/userid",useridRouter);
+
 app.listen(PORT, () => console.log(`The server started in: ${PORT} ✨✨`));

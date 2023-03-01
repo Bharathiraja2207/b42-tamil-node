@@ -160,3 +160,18 @@ db.moviesbyid.insertMany([
       "id": "109"
     }
   ])
+
+  db.userids.insertMany([
+    {
+     "name": "Sara Fadel",
+     "email": "paruthi@1234",
+     "id": "2",
+     "username": "paruthi8"
+    },
+    {
+     "name": "Dr. Danny Cronin",
+     "email": "ee@gmail.com",
+     "id": "3",
+     "username": "eee"
+    }
+   ])
